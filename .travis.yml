@@ -4,8 +4,9 @@ services:
 
 
 before_install:
-        - docker build -t amitabhajana/docker-react -f Dockerfile.dev .
+        - docker build -t amitabhajana/react-docker -f Dockerfile.dev .
 
 script:
-    - docker run amitabhajana/docker-react npm run test -- --coverage
-     
+    - docker run -e CI=true amitabhajana/react-docker npm run test
+
+
