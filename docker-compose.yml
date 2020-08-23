@@ -1,0 +1,10 @@
+version: '3'
+services:
+    web:
+        image: "amitabhajana/react-app-2"
+        ports: 
+            - "8081:3000"
+        volumes:
+            - /app/node-modules
+            - .:/myapp
+                
