@@ -1,0 +1,10 @@
+FROM node:alpine
+WORKDIR /app
+COPY package-lock.json /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+CMD ["run", "npm", "start"]
+
+
+
